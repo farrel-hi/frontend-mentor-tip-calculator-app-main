@@ -1,0 +1,2 @@
+Tip Amount = (Bill * Tip)/Number of People
+Total = (Bill * Tip)
