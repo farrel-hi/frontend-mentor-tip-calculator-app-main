@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: 'Space Mono',Tahoma, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+/* Mobile Rules (Width: 375px) */
+body{
+    background-color: hsl(185, 41%, 84%); 
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    padding: 5px 10px 5px 10px;
+    
+    width: fit-content;
+    text-align: right;
+}
+
+div.title-container{
+    padding-top:40px;
+    padding-bottom: 40px;
+
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+}
+
+div.main-container{
+    padding:5%;
+    width: 90%;
+    border-radius: 20px 20px 0 0;
+
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* Section One (Variable Section) */
+section.variable-corner{
+    padding: 5%;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+section.variable-corner > p.category{
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    width: fit-content;
+    color: hsl(183, 100%, 15%);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+section.variable-corner:first-child{
+    margin-top: -20px;
+}
+
+input.user-input{
+    width: 100%;
+
+    border: 0;
+    border-color: hsl(189, 41%, 97%);
+    background-color: hsl(189, 41%, 97%);
+    color:hsl(183, 100%, 15%);
+    font-weight: bold;
+}
+
+i.dollar-icon{
+    position: absolute;
+    background: url(images\icon-dollar.svg) no-repeat scroll 7px 7px;
+}
+
+div.tip-container{
+    width: 80vw;
+    /* background-color: aqua; */
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    
+}
+
+div.tip-container > *{
+    height: 5vh;
+    width: 6rem;
+
+    border-radius: 5px;
+    border: 0;
+    border-color: none;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
+div.tip-container > div.tip-item{
+    width: 100%;
+    padding:10px 0 10px 0;
+    line-height: auto;
+    background-color: white;
+}
+
+button.tip-item:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+/* Section Two (Result Section) */
+section.result-corner{
+    padding: 8%;
+    border-radius: 10px;
+    background-color: hsl(183, 100%, 15%);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.content-container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.result-title-container > p.category{
+    /* width: fit-content; */
+
+    font-size: 16px;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+}
+
+div.result-title-container > p.person{
+    margin-bottom: 20px;
+    width: fit-content;
+
+    font-size: 12px;
+    font-weight: bold;
+    color: hsl(186, 14%, 43%);
+}
+
+div.amount-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+div.amount-container > *{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button#reset{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: 5px;
+    border:0;
+    border-color: hsl(172, 67%, 45%);
+
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: hsl(0, 0%, 100%);
+    
+    font-size: 8px;
+    text-align: center;
+}
+
+footer > a {
+    color: hsl(228, 45%, 44%) ;
+    font-size: 8px;
+}
+/* Desktop Rules (Width: 1440px) */
+@media only screen and (min-width: 1440px){
+
+}

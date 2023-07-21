@@ -4,69 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link href='https://fonts.googleapis.com/css?family=Space+Mono' rel='stylesheet'>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
   <main>
-    <div>
+    <div class="title-container">
       S P L I<br>
       T T E R
     </div>
     <div class="main-container">
       <section class="variable-corner">
         <p class="category">Bill</p>
-        <input type="text" placeholder="0">
+        <i class="dollar-icon"></i>
+        <input class="user-input" type="text" placeholder="0">
 
         <p class="category">Select Tip %</p>
         <div class="tip-container">
-          <div class="tip-item">5%</div>
-          <div class="tip-item">10%</div>
-          <div class="tip-item">15%</div>
-          <div class="tip-item">25%</div>
-          <div class="tip-item">50%</div>
-          <div class="tip-item"><input type="text" placeholder="Custom"></div>
+          <button class="tip-item">10%</button>
+          <button class="tip-item">5%</button>
+          <button class="tip-item">15%</button>
+          <button class="tip-item">25%</button>
+          <button class="tip-item">50%</button>
+          <div class="tip-item"><input class="user-input" type="text" placeholder="Custom"></div>
         </div>
         
       
         <p class="category">Number of People</p>
-        <input type="text" placeholder="0">
+        <input class="user-input" type="text" placeholder="0">
 
       </section>
       <section class="result-corner">
-        <div class="result-title-container">
-          <p>
-
-            Tip Amount
-          / person
-          </p>
-
-          <p>
-            Total
-        / person
-          </p>
-      
-          
-        </div>
-        <div class="amount-container>
-            <input type="text" placeholder="0.0">
-          <input type="text" placeholder="0.0">
+        <div class="content-container">
+          <div class="result-title-container">
+            <p class="category">Tip Amount</p>
+            <p class="person">/ person</p>
+            
+            <p class="category">Total</p>
+            <p class="person">/ person</p>
           </div>
-      
-        <input type="button" placeholder="Reset">
+  
+          <div class="amount-container">
+            <p class="result" id="tip-amount">$0.0</p>
+            <p class="result" id="total">$0.0</p>
+          </div>
+        </div>
+        
+
+        <button type="button" id="reset">RESET</button>
       </section>
     </div>
-
-   
-  
-    
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
