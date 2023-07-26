@@ -30,8 +30,8 @@
 
         <p class="category">Select Tip %</p>
         <div class="tip-container">
-          <button class="tip-item">10%</button>
           <button class="tip-item">5%</button>
+          <button class="tip-item">10%</button>
           <button class="tip-item">15%</button>
           <button class="tip-item">25%</button>
           <button class="tip-item">50%</button>
@@ -45,17 +45,24 @@
       </section>
       <section class="result-corner">
         <div class="content-container">
-          <div class="result-title-container">
-            <p class="category">Tip Amount</p>
-            <p class="person">/ person</p>
-            
-            <p class="category">Total</p>
-            <p class="person">/ person</p>
+          <div class="main-category-container first-category">
+            <aside class="category-container">
+              <p class="category">Tip Amount</p>
+              <p class="person">/ person</p>
+            </aside>
+            <aside class="category-result">
+              <p class="result" id="tip-amount">$0.0</p>
+            </aside>
           </div>
   
-          <div class="amount-container">
-            <p class="result" id="tip-amount">$0.0</p>
-            <p class="result" id="total">$0.0</p>
+          <div class="main-category-container second-category">
+            <aside class="category-container">
+              <p class="category">Total</p>
+              <p class="person">/ person</p>
+            </aside>
+            <aside class="category-result">
+              <p class="result" id="total">$0.0</p>
+            </aside>
           </div>
         </div>
         

@@ -123,40 +123,48 @@ section.result-corner{
 }
 
 div.content-container{
-    
+    height: 12vh;
+    margin-bottom: 20px;
+
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-div.result-title-container > p.category{
-    /* width: fit-content; */
+div.main-category-container{
+    width: 100%;
 
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+aside.category-container{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: left;
+}
+
+aside.category-container > p.category{
     font-size: 16px;
     font-weight: bold;
     color: hsl(0, 0%, 100%);
 }
 
-div.result-title-container > p.person{
-    margin-bottom: 20px;
-    width: fit-content;
-
+aside.category-container > p.person{
     font-size: 12px;
     font-weight: bold;
     color: hsl(186, 14%, 43%);
 }
 
-div.amount-container{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
 
-}
-
-div.amount-container > *{
-    margin-top: 10px;
-    margin-bottom: 10px;
+p.result{
+    color: hsl(172, 67%, 45%);
+    font-weight: bolder;
+    font-size: 24px;
 }
 
 button#reset{
@@ -187,7 +195,84 @@ footer > a {
     color: hsl(228, 45%, 44%) ;
     font-size: 8px;
 }
+
+
 /* Desktop Rules (Width: 1440px) */
 @media only screen and (min-width: 1440px){
+    div.main-container{
+        padding:50px;
 
+        width: 70%;
+
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    section.variable-corner{
+        margin:0 50px 0 0;
+        padding:0;
+
+        height: 40vh;
+        width: 50%;
+    }
+
+    section.variable-corner:first-child{
+        margin-top: -100px;
+    }
+
+    section.variable-corner > p.category{
+        font-size: 20px;
+    }
+
+    div.tip-container{
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 15px;
+    }
+
+    button.tip-item{
+        height: 6vh;
+        width: 11vw;
+    }
+
+    div.tip-item > input.user-input{
+        width: 10vw;
+    }
+
+    section.result-corner{
+        padding: 40px;
+
+        height: 40vh;
+        width: 50%;
+
+        display:flex;
+        justify-content: space-between;
+    }
+
+    p.category{
+        font-size: 20px;
+    }
+
+    div.first-category{
+        margin-bottom: 20px;
+    }
+
+    aside.category-result > p.result{
+        font-size: 50px;
+    }
+
+    /* FOOTER */
+    footer{
+        position: absolute;
+        left: 45vw;
+        top:98vh;
+
+        background-color: hsl(185, 41%, 84%); 
+    }
 }
