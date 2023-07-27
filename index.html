@@ -25,8 +25,12 @@
     <div class="main-container">
       <section class="variable-corner">
         <p class="category">Bill</p>
-        <i class="dollar-icon"></i>
-        <input class="user-input" type="text" placeholder="0">
+        <div class="input-container">
+          <div class="icon-container">
+            <img src="images/icon-dollar.svg" alt="dollar-icon" class="icon">
+          </div>
+          <input id="bill" class="user-input" type="text" placeholder="0">
+        </div>
 
         <p class="category">Select Tip %</p>
         <div class="tip-container">
@@ -35,12 +39,17 @@
           <button class="tip-item">15%</button>
           <button class="tip-item">25%</button>
           <button class="tip-item">50%</button>
-          <div class="tip-item"><input class="user-input" type="text" placeholder="Custom"></div>
+          <div class="tip-item"><input id="custom-tip" class="user-input" type="text" placeholder="Custom"></div>
         </div>
         
       
         <p class="category">Number of People</p>
-        <input class="user-input" type="text" placeholder="0">
+        <div class="input-container">
+          <div class="icon-container">
+            <img src="images/icon-person.svg" alt="dollar-icon" class="icon">
+          </div>
+          <input id= "num-people" class="user-input" type="text" placeholder="0">
+        </div>
 
       </section>
       <section class="result-corner">
@@ -75,5 +84,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

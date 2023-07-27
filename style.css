@@ -62,20 +62,60 @@ section.variable-corner:first-child{
     margin-top: -20px;
 }
 
+div.input-container{
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    background-color: hsl(189, 41%, 97%);
+}
+
 input.user-input{
     width: 100%;
 
     border: 0;
-    border-color: hsl(189, 41%, 97%);
-    background-color: hsl(189, 41%, 97%);
+    background: transparent;
+    border: none;
     color:hsl(183, 100%, 15%);
     font-weight: bold;
 }
 
+div.tip-item > input.user-input{
+    margin-top: -100px;
+    width:32vw;
+    border-radius: 5px;
+
+    background-color: hsl(189, 41%, 97%);
+}
+
+input.user-input:focus{
+    border: none;
+    outline: none;
+}
+
+
+div.icon-container{
+    width: 10vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+img.icon{
+    width: 12px;
+    height: auto;
+}
+
+
+
+/* 
 i.dollar-icon{
     position: absolute;
     background: url(images\icon-dollar.svg) no-repeat scroll 7px 7px;
-}
+} */
 
 div.tip-container{
     width: 80vw;
@@ -202,7 +242,7 @@ footer > a {
     div.main-container{
         padding:50px;
 
-        width: 70%;
+        width: 60%;
 
         border-radius: 20px;
 
@@ -228,6 +268,19 @@ footer > a {
         font-size: 20px;
     }
 
+    input.user-input{
+        width: 25vw;
+    }
+
+    div.icon-container{
+        width: 2vw;
+    }
+    
+    img.icon{
+        width: 13px;
+        height: auto;
+    }
+
     div.tip-container{
         width: 100%;
 
@@ -238,11 +291,14 @@ footer > a {
 
     button.tip-item{
         height: 6vh;
-        width: 11vw;
+        width: 8vw;
     }
 
     div.tip-item > input.user-input{
-        width: 10vw;
+        width: 7vw;
+        height: 5vh;
+        
+        text-align: center;
     }
 
     section.result-corner{
@@ -255,16 +311,23 @@ footer > a {
         justify-content: space-between;
     }
 
-    p.category{
-        font-size: 20px;
+    aside.category-container > p.category{
+        font-size: 25px;
     }
 
     div.first-category{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     aside.category-result > p.result{
         font-size: 50px;
+    }
+
+    button#reset{
+        height: 7vh;
+
+        font-size: 25px;
+        font-weight: 700;
     }
 
     /* FOOTER */
