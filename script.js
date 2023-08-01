@@ -8,31 +8,62 @@ function assignEvent(value) {
     console.log(`tip: ${tip}, tip type: ${typeof tip}`)
 }
 
+function changeButtanDisplay(percentage) {
+    document.getElementById(`${percentage}`).style.color = "hsl(183, 100%, 15%)";
+    document.getElementById(`${percentage}`).style.backgroundColor = "hsl(172, 67%, 45%)";
+}
+
+function resetButtonDisplay(buttons) {
+    buttons.forEach(button => {
+        button.style.backgroundColor = "hsl(183, 100%, 15%)";
+        button.style.color = "hsl(189, 41%, 97%)"; 
+      });
+}
+
 const btn = document.querySelectorAll('button.tip-item');
 for (let i = 0;i<btn.length;i++){
     btn[i].addEventListener("click", function(){
         let clickValue = btn[i].innerHTML;
+        document.getElementById("custom-tip").value = "";
+        resetButtonDisplay(btn); //reset all button display to original first so it will change the previous clicked button to the original
+        changeButtanDisplay(clickValue);
         assignEvent(clickValue);
     });
 }
 
+const customTipBtn = document.getElementById("custom-tip");
+customTipBtn.addEventListener("click", function(){
+    resetButtonDisplay(btn);
+})
+
+const resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", function(){
+    document.getElementById("total").innerHTML = `$0.0`;
+    document.getElementById("tip-amount").innerHTML = `$0.0`;
+    document.getElementById("bill").value = "";
+    document.getElementById("num-people").value = "";
+    document.getElementById("custom-tip").value = "";
+    resetButtonDisplay(btn); //reset all button display to original first so it will change the previous clicked button to the original
+})
+
 function assignResult(total,amount) {
-    document.getElementById("total").innerHTML = `$${total.toString()}`;
-    document.getElementById("tip-amount").innerHTML = `$${amount.toString()}`;
+    document.getElementById("total").innerHTML = `$${total}`;
+    document.getElementById("tip-amount").innerHTML = `$${amount}`;
 }
 
 function calculateTip() {
-    totalTip = (bill*tip)/100;
-
-    console.log(`\n Total Tip: ${totalTip} type of ${typeof totalTip}`);
-
-    tipAmount = totalTip/numOfPeople;
+    tipAmount = (bill*(tip/100))/numOfPeople;
     console.log(`\n People: ${numOfPeople} type of ${typeof numOfPeople}`);
+    
+    totalTip = (bill/numOfPeople)+tipAmount;
+    console.log(`\n Total Tip: ${totalTip} type of ${typeof totalTip}`);
 
     console.log(`\n Tip Amount: ${tipAmount} type of ${typeof tipAmount}`);
 
+    let tipToFloat = parseFloat(tipAmount.toFixed(2));
+    let totalToFloat = parseFloat(totalTip.toFixed(2));
 
-    assignResult(totalTip,tipAmount);
+    assignResult(totalToFloat,tipToFloat);
 }
 
 function checkCustomInput() {
